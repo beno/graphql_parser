@@ -7,7 +7,7 @@ defmodule GraphQL.Parser.Mixfile do
     [app: :graphql_parser,
      name: "GraphQL.Parser",
      version: @version,
-     elixir: "~> 1.2",
+     elixir: "~> 1.3",
      compilers: [:nif] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -22,9 +22,9 @@ defmodule GraphQL.Parser.Mixfile do
   end
 
   defp deps do
-    [{:poison, "~> 2.0"},
-     {:earmark, "~> 0.1", only: :dev},
-     {:ex_doc, "~> 0.11", only: :dev}]
+    [{:poison, "~> 3.0"},
+     {:earmark, "> 0.0.0", only: :dev},
+     {:ex_doc, "> 0.0.0", only: :dev}]
   end
 
   defp description do
